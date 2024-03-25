@@ -36,7 +36,7 @@
                 return;
             }
     
-            const connectionString = "DefaultEndpointsProtocol=https;AccountName=filesharewebapp228;AccountKey=2nov/9hkmMNn6kJgAKTCmGqq2nSnqqdRxkB7WOgtpPiOqSuK2GeUISGE2C9ngw6U63LCoVuimkZ/+ASte8yk9g==;EndpointSuffix=core.windows.net";
+            const connectionString = "";
             const containerName = "sharedfiles";
             const blobServiceClient = new azureStorageBlob.BlobServiceClient(connectionString);
             const containerClient = blobServiceClient.getContainerClient(containerName);
