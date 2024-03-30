@@ -1,13 +1,8 @@
 const { BlobServiceClient } = require("@azure/storage-blob");
 
-const createContainerButton = document.getElementById("create-container-button");
-const deleteContainerButton = document.getElementById("delete-container-button");
 const selectButton = document.getElementById("select-button");
 const fileInput = document.getElementById("file-input");
-const listButton = document.getElementById("list-button");
-const deleteButton = document.getElementById("delete-button");
 const status = document.getElementById("status");
-const fileList = document.getElementById("file-list");
 
 const reportStatus = message => {
     status.innerHTML += `${message}<br/>`;
