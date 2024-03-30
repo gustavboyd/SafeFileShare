@@ -1,58 +1,24 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static HTML Site with File Upload</title>
-    <!-- Add your CSS stylesheets here -->
-</head>
+<html>
+<header>
+    <h1>
+        Welcome to SafeFileShare!
+    </h1>
+</header>
+
 <body>
-    <header>
-        <h1>Welcome to My Static Site</h1>
-    </header>
-    <main>
-        <!-- File upload section -->
-        <section>
-            <h2>Upload a File</h2>
-            <form id="fileUploadForm" enctype="multipart/form-data">
-                <input type="file" id="fileInput" name="fileInput">
-                <button type="submit">Upload</button>
-            </form>
-        </section>
-        <section>
-            <h2>Time-limited link:</h2>
-            <p>"link will show here, need to add functionality"</p>
-        </section>
-    </main>
-    <!-- Add your JavaScript scripts here -->
-    <script src="https://cdn.jsdelivr.net/npm/@azure/storage-blob@12/dist/index.browser.umd.min.js"></script>
-    <script>
-        document.getElementById("fileUploadForm").addEventListener("submit", async function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            // Check if azureStorageBlob is defined before using it
-            if (typeof azureStorageBlob === 'undefined') {
-                console.error("Azure Storage Blob SDK is not loaded.");
-                return;
-            }
-    
-            const connectionString = "";
-            const containerName = "sharedfiles";
-            const blobServiceClient = new azureStorageBlob.BlobServiceClient(connectionString);
-            const containerClient = blobServiceClient.getContainerClient(containerName);
-    
-            const fileInput = document.getElementById("fileInput");
-            const file = fileInput.files[0];
-            const blobName = file.name;
-    
-            try {
-                const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-                await blockBlobClient.uploadData(file, { blobHTTPHeaders: { blobContentType: file.type } });
-                console.log("File uploaded successfully.");
-            } catch (error) {
-                console.error("Error uploading file:", error);
-            }
-        });
-    </script>
+    <p>
+        <h3>
+            Upload a file by pressing the button below.
+        </h3>
+    </p>
+    <button id="select-button">Select and upload files</button>
+    <input type="file" id="file-input" multiple style="display: none;" />
+    <p><b>Status:</b></p>
+    <p id="status"></p>
 </body>
+
+<script type="module" src="./index.js"></script>
+
 </html>
