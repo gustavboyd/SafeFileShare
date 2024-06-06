@@ -57,17 +57,6 @@ Steps to Set Up the System:
       - Configure lifecycle management policies in Azure Blob Storage.
       - Set rules to delete or archive inactive files after 24 hours.
 
-Getting Started
-1. Clone this repository.
-2. Set up Azure Blob Storage and static web app outlined above.
-3. Configure the web application with the necessary Azure credentials and connection strings.
-4. Deploy the web application to Azure Web Apps.
-5. Start uploading files and monitor the activities.
-
-Contributions:
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
 License:
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
