@@ -5,7 +5,9 @@ Azure Services Used:
 - Azure Blob Storage: Stores uploaded files.
 - Azure Web Apps: Hosts the web application.
 
+
 Steps to Set Up the System:
+
 1. Storage Setup
 
 1.1 Set up an Azure Blob Storage account and create a container to store the uploaded files.
