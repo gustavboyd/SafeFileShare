@@ -1,10 +1,9 @@
 # SafeFileShare
 This project demonstrates how to build a web application that allows users to upload files to Azure Blob Storage. The application also generates unique links for each uploaded file and ensures secure access using Azure KeyVault and SAS tokens. Additionally, it includes monitoring and automatic cleanup of inactive files.
 
-Azure Services Used
-Azure Blob Storage: Stores uploaded files.
-Azure Web Apps: Hosts the web application.
-Azure KeyVault: Manages secrets like connection strings and keys.
+Azure Services Used:
+- Azure Blob Storage: Stores uploaded files.
+- Azure Web Apps: Hosts the web application.
 
 Steps to Set Up the System:
 1. Storage Setup
